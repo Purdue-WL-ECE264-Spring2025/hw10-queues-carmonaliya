@@ -4,7 +4,13 @@
 
 struct list_node *new_node(size_t value) { return NULL; }
 
-void insert_at_head(struct linked_list *list, size_t value) {}
+void insert_at_head(struct linked_list *list, size_t value) {
+  
+  list_node nd = malloc(sizeof(list_node));
+  nd -> value = val;
+  nd -> next = NULL;
+  ptr -> next = head;
+}
 
 void insert_at_tail(struct linked_list *list, size_t value) {}
 
