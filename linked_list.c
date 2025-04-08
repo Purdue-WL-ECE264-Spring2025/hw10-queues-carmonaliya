@@ -4,20 +4,22 @@
 
 struct list_node *new_node(size_t value) { 
   list_node * nd = malloc(sizeof(list_node));
-  nd -> value = val;
+  nd -> value = value;
   nd -> next = NULL;
   return nd;
   }
 
 void insert_at_head(struct linked_list *list, size_t value) {
-  list_node * ptr = new_node(val); 
+  list_node * ptr = new_node(value); 
   ptr -> next = list -> head; // insert new node before head
   list -> head = ptr;
   return;
 }
 
 void insert_at_tail(struct linked_list *list, size_t value) {
-
+  list_node * ptr = new_node(value); 
+  list -> head -> next = ptr;
+  return;
 }
 
 size_t remove_from_head(struct linked_list *list) { 
