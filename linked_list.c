@@ -3,15 +3,17 @@
 #include <stdlib.h>
 
 struct list_node *new_node(size_t value) { 
-  
-  return NULL; }
-
-void insert_at_head(struct linked_list *list, size_t value) {
-  
-  list_node nd = malloc(sizeof(list_node));
+  list_node * nd = malloc(sizeof(list_node));
   nd -> value = val;
   nd -> next = NULL;
-  ptr -> next = head;
+  return nd;
+  }
+
+void insert_at_head(struct linked_list *list, size_t value) {
+  list_node * ptr = new_node(val); 
+  ptr -> next = list -> head; // insert new node before head
+  list -> head = ptr;
+  return;
 }
 
 void insert_at_tail(struct linked_list *list, size_t value) {
